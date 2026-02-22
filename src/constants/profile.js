@@ -11,7 +11,7 @@ const SOCIAL_LINKS = [
         id: "github",
         label: "GitHub",
         // TODO: Remplace par ton URL GitHub
-        url: "https://github.com/ton-pseudo",
+        url: "https://github.com/Edmond22-prog",
         // Icône SVG inline — cohérent sans dépendance externe
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
@@ -28,7 +28,7 @@ const SOCIAL_LINKS = [
         id: "linkedin",
         label: "LinkedIn",
         // TODO: Remplace par ton URL LinkedIn
-        url: "https://linkedin.com/in/ton-profil",
+        url: "https://linkedin.com/in/edmondmakolle",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136
         1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85
@@ -42,7 +42,7 @@ const SOCIAL_LINKS = [
         id: "twitter",
         label: "Twitter / X",
         // TODO: Remplace par ton URL Twitter/X
-        url: "https://twitter.com/ton-pseudo",
+        url: "https://twitter.com/edmondmakolle",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401
         6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084
@@ -53,7 +53,7 @@ const SOCIAL_LINKS = [
         id: "medium",
         label: "Medium",
         // TODO: Remplace par ton URL Medium
-        url: "https://medium.com/@ton-pseudo",
+        url: "https://medium.com/@edmondmakolle",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0
         1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87
