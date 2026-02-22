@@ -1,0 +1,344 @@
+/* ==========================================================================
+   index.css — Design System
+   Inspiré : portfolio plein-écran, géométrie, texte gauche, tons sombre/violet
+   ========================================================================== */
+
+/* 1. Police ----------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;0,800&display=swap");
+
+/* 2. Tokens ----------------------------------------------------------------- */
+:root {
+  /* Fond */
+  --bg: #0d0d1b;
+  --bg-mid: #10102a;
+
+  /* Accent violet */
+  --accent: #7b5ef8;
+  --accent-bright: #9d7eff;
+  --accent-border: rgba(123, 94, 248, 0.55);
+  --accent-glow: rgba(123, 94, 248, 0.15);
+
+  /* Texte */
+  --text-primary: #f4f0ff;
+  --text-secondary: #a09cc0;
+  --text-muted: #5a5780;
+
+  /* Géométrie décorative */
+  --geo-border: rgba(123, 94, 248, 0.25);
+
+  /* Transitions */
+  --ease: 250ms ease;
+  --ease-slow: 500ms ease;
+
+  /* Typographie */
+  --font: "Inter", system-ui, sans-serif;
+}
+
+/* 3. Reset ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  min-height: 100dvh;
+  overflow: hidden;
+  /* pas de scroll sur landing page une seule section */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 4. Animations ------------------------------------------------------------- */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Rotation lente des formes géométriques */
+@keyframes geo-float {
+  0% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(-20deg) translateY(-18px);
+  }
+
+  100% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+}
+
+@keyframes geo-float-alt {
+  0% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(-20deg) translateY(12px);
+  }
+
+  100% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+}
+
+/* 5. Layout Hero ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* centré verticalement */
+  min-height: 100dvh;
+  padding: 0 8vw;
+  /* aligné à gauche */
+  overflow: hidden;
+
+  /* Dégradé sombre directionnel */
+  background:
+    radial-gradient(ellipse 60% 80% at 70% 50%, #13103a 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(100, 70, 220, 0.07) 0%, transparent 70%),
+    var(--bg);
+}
+
+/* 6. Contenu --------------------------------------------------------------- */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Nom */
+.hero__name {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+
+  opacity: 0;
+  animation: fadeInLeft var(--ease-slow) both;
+  animation-delay: 0.1s;
+}
+
+/* Titre */
+.hero__title {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--accent-bright);
+
+  opacity: 0;
+  animation: fadeInLeft var(--ease-slow) both;
+  animation-delay: 0.25s;
+}
+
+/* Préfixe terminal `>` */
+.hero__title-prefix {
+  font-weight: 700;
+  color: var(--accent-bright);
+  margin-right: 0.15em;
+}
+
+/* Bio */
+.hero__bio {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 420px;
+
+  opacity: 0;
+  animation: fadeInLeft var(--ease-slow) both;
+  animation-delay: 0.4s;
+}
+
+/* 7. Social links — format compact horizontal -------------------------------- */
+.social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+
+  opacity: 0;
+  animation: fadeIn var(--ease-slow) both;
+  animation-delay: 0.6s;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  /* pill */
+  background: var(--accent-glow);
+
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+
+  transition:
+    background var(--ease),
+    border-color var(--ease),
+    color var(--ease),
+    transform var(--ease);
+
+  /* Stagger géré via style inline sur le composant */
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.social-link:hover {
+  background: rgba(123, 94, 248, 0.28);
+  border-color: var(--accent-bright);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.social-link:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.social-link__icon {
+  display: flex;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--accent-bright);
+}
+
+.social-link__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.social-link__label {
+  line-height: 1;
+}
+
+/* Flèche cachée — on simplifie pour la version pill */
+.social-link__arrow {
+  display: none;
+}
+
+/* 8. Formes géométriques (grands rectangles inclinés) ----------------------- */
+.geo-shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Classe de base commune aux formes */
+.geo-shape {
+  position: absolute;
+  border: 1px solid var(--geo-border);
+  border-radius: 12px;
+  transform: rotate(-20deg);
+}
+
+/* Grand losange principal — centré-droit, grand */
+.geo-shape--1 {
+  width: 55vw;
+  height: 160vh;
+  top: -30vh;
+  right: -5vw;
+  border-color: rgba(123, 94, 248, 0.3);
+  animation: geo-float 12s ease-in-out infinite;
+}
+
+/* Rectangle secondaire — décalé derrière */
+.geo-shape--2 {
+  width: 42vw;
+  height: 130vh;
+  top: -15vh;
+  right: 12vw;
+  border-color: rgba(123, 94, 248, 0.15);
+  animation: geo-float-alt 16s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* Petit losange avant, plus à droite */
+.geo-shape--3 {
+  width: 28vw;
+  height: 100vh;
+  top: 5vh;
+  right: 28vw;
+  border-color: rgba(123, 94, 248, 0.1);
+  animation: geo-float 20s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+/* 9. Responsive ------------------------------------------------------------- */
+@media (max-width: 640px) {
+  body {
+    overflow-y: auto;
+  }
+
+  /* Permet le scroll sur mobile */
+
+  .hero {
+    align-items: flex-start;
+    padding: 20vw 6vw;
+  }
+
+  .geo-shape--1 {
+    width: 120vw;
+  }
+
+  .geo-shape--2 {
+    display: none;
+  }
+
+  .geo-shape--3 {
+    display: none;
+  }
+
+  .social-grid {
+    gap: 0.5rem;
+  }
+
+  .social-link {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
