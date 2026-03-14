@@ -2,14 +2,17 @@
  * Hero.jsx
  *
  * Layout plein écran inspiré portfolio designer :
+ *  - Slideshow d'images en arrière-plan (crossfade CSS)
  *  - Texte aligné à gauche, verticalement centré
- *  - Fond sombre avec formes géométriques décoratives
+ *  - Formes géométriques décoratives par-dessus le slideshow
  *  - Pas de carte/bulle
  *
  * @param {Object} props
  * @param {import('../constants/profile').PROFILE} props.profile
  */
 import SocialGrid from "./SocialGrid";
+import BackgroundSlideshow from "./BackgroundSlideshow";
+import { BACKGROUND_IMAGES, SLIDE_DURATION } from "../constants/backgrounds";
 
 function Hero({ profile }) {
     const { name, title, bio, socials } = profile;
@@ -17,7 +20,13 @@ function Hero({ profile }) {
     return (
         <main className="hero">
 
-            {/* ── Décors géométriques (losanges / rectangles inclinés) ── */}
+            {/* ── Slideshow en arrière-plan (couche la plus basse) ── */}
+            <BackgroundSlideshow
+                images={BACKGROUND_IMAGES}
+                slideDuration={SLIDE_DURATION}
+            />
+
+            {/* ── Décors géométriques (par-dessus le slideshow) ── */}
             <div className="geo-shapes" aria-hidden="true">
                 <div className="geo-shape geo-shape--1" />
                 <div className="geo-shape geo-shape--2" />

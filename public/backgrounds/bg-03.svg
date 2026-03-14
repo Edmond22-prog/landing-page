@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#100820"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#2a1060" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <!-- Concentric faint rings -->
+  <circle cx="1300" cy="540" r="200" fill="none" stroke="#7b5ef8" stroke-opacity="0.06" stroke-width="1"/>
+  <circle cx="1300" cy="540" r="350" fill="none" stroke="#7b5ef8" stroke-opacity="0.04" stroke-width="1"/>
+  <circle cx="1300" cy="540" r="500" fill="none" stroke="#7b5ef8" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Corner accent -->
+  <circle cx="1300" cy="540" r="80" fill="#7b5ef8" fill-opacity="0.07"/>
+  <circle cx="400" cy="900" r="180" fill="#4c2fa0" fill-opacity="0.05"/>
+</svg>

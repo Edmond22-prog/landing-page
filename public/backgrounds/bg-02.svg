@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="g1" cx="30%" cy="60%" r="70%">
+      <stop offset="0%" stop-color="#0d1535"/>
+      <stop offset="100%" stop-color="#06060f"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#1c0a45" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g1)"/>
+  <rect width="1920" height="1080" fill="url(#g2)"/>
+  <!-- Bokeh dots -->
+  <circle cx="1600" cy="150" r="60" fill="#9d7eff" fill-opacity="0.06"/>
+  <circle cx="1750" cy="350" r="30" fill="#7b5ef8" fill-opacity="0.08"/>
+  <circle cx="1500" cy="500" r="80" fill="#4c3baf" fill-opacity="0.05"/>
+  <circle cx="200" cy="200" r="100" fill="#7b5ef8" fill-opacity="0.04"/>
+  <circle cx="800" cy="900" r="120" fill="#9d7eff" fill-opacity="0.04"/>
+  <!-- Subtle diagonal lines -->
+  <g stroke="#5b3dd8" stroke-opacity="0.06" stroke-width="1">
+    <line x1="-100" y1="600" x2="1200" y2="-100"/>
+    <line x1="200" y1="1200" x2="1600" y2="-200"/>
+    <line x1="600" y1="1300" x2="2100" y2="-200"/>
+  </g>
+</svg>
