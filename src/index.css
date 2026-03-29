@@ -400,31 +400,55 @@ a {
 }
 
 /* 9. Responsive ------------------------------------------------------------- */
-@media (max-width: 640px) {
-  body {
-    overflow-y: auto;
-  }
 
-  /* Permet le scroll sur mobile */
-
+/* Tablette (641px – 1024px) */
+@media (max-width: 1024px) {
   .hero {
-    align-items: flex-start;
-    padding: 20vw 6vw;
+    padding: 0 6vw;
   }
 
-  .geo-shape--1 {
-    width: 120vw;
-  }
-
-  .geo-shape--2 {
-    display: none;
+  .hero__content {
+    max-width: 100%;
   }
 
   .geo-shape--3 {
     display: none;
   }
+}
+
+/* Mobile (≤ 640px) */
+@media (max-width: 640px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    align-items: flex-start;
+    padding: 14vw 6vw 10vw;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero__bio {
+    max-width: 100%;
+  }
+
+  .geo-shape--1 {
+    width: 120vw;
+    right: -20vw;
+  }
+
+  .geo-shape--2,
+  .geo-shape--3 {
+    display: none;
+  }
 
   .social-grid {
+    flex-wrap: wrap;
     gap: 0.5rem;
   }
 
