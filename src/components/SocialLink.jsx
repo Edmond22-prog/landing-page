@@ -10,13 +10,13 @@
  * @param {string} props.icon     - Icône SVG en string
  * @param {number} props.index    - Index dans la liste (utilisé pour le délai d'animation)
  */
-function SocialLink({ label, url, icon, index = 0 }) {
+function SocialLink({ label, url, icon, index = 0, target = "_blank" }) {
     return (
         <a
             className="social-link"
             href={url}
-            target="_blank"
-            rel="noopener noreferrer" // Bonne pratique sécurité pour les liens externes
+            target={target}
+            rel={target === "_blank" ? "noopener noreferrer" : undefined}
             aria-label={`Visiter mon profil ${label}`}
             // Délai progressif pour l'animation d'apparition (stagger effect)
             style={{ animationDelay: `${0.6 + index * 0.1}s` }}

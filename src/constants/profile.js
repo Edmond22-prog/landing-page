@@ -10,7 +10,6 @@ const SOCIAL_LINKS = [
     {
         id: "github",
         label: "GitHub",
-        // TODO: Remplace par ton URL GitHub
         url: "https://github.com/Edmond22-prog",
         // Icône SVG inline — cohérent sans dépendance externe
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -27,7 +26,6 @@ const SOCIAL_LINKS = [
     {
         id: "linkedin",
         label: "LinkedIn",
-        // TODO: Remplace par ton URL LinkedIn
         url: "https://linkedin.com/in/edmondmakolle",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136
@@ -40,8 +38,7 @@ const SOCIAL_LINKS = [
     },
     {
         id: "twitter",
-        label: "Twitter / X",
-        // TODO: Remplace par ton URL Twitter/X
+        label: "Twitter",
         url: "https://twitter.com/edmondmakolle",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401
@@ -52,7 +49,6 @@ const SOCIAL_LINKS = [
     {
         id: "medium",
         label: "Medium",
-        // TODO: Remplace par ton URL Medium
         url: "https://medium.com/@edmondmakolle",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0
@@ -60,6 +56,19 @@ const SOCIAL_LINKS = [
         0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53
         5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83
         24 12z"/>
+    </svg>`,
+    },
+    {
+        id: "portfolio",
+        label: "Portfolio",
+        // TODO: Remplace par l'URL de ton portfolio
+        url: "http://localhost:5173",
+        target: "_self",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1
+        17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54
+        c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0
+        2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
     </svg>`,
     },
 ];

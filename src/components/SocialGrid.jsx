@@ -9,12 +9,13 @@ import SocialLink from "./SocialLink";
 function SocialGrid({ socials }) {
     return (
         <nav className="social-grid" aria-label="Mes réseaux sociaux">
-            {socials.map((social, index) => (
+            {socials.filter(s => s.url).map((social, index) => (
                 <SocialLink
                     key={social.id}
                     label={social.label}
                     url={social.url}
                     icon={social.icon}
+                    target={social.target}
                     index={index}
                 />
             ))}
