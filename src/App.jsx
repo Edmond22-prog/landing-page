@@ -7,12 +7,14 @@
  */
 import Hero from "./components/Hero";
 import { PROFILE } from "./constants/profile";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     // data-theme permet d'ajouter facilement un toggle light/dark plus tard
     <div data-theme="dark">
       <Hero profile={PROFILE} />
+      <Analytics />
     </div>
   );
 }
