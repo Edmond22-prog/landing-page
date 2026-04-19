@@ -61,8 +61,7 @@ const SOCIAL_LINKS = [
     {
         id: "portfolio",
         label: "Portfolio",
-        // TODO: Remplace par l'URL de ton portfolio
-        url: "http://localhost:5173",
+        url: "https://edmondmakolle.com",
         target: "_self",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1
@@ -80,7 +79,7 @@ const SOCIAL_LINKS = [
 export const PROFILE = {
     name: "Edmond Makolle",
 
-    title: "Backend Engineer & Community Organizer",
+    title: "Backend Engineer & Community Builder",
 
     bio: "I build scalable backend systems and foster vibrant tech communities. Passionate about open source and developer empowerment.",
 
